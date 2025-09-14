@@ -1,19 +1,16 @@
-// src/app/layout.tsx
-import type { Metadata } from "next";
 import "./globals.css";
-import { Web3Providers } from "@/lib/wagmi";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ShibaToot",
-  description: "Launchpad",
+  title: "ShibaToot — Launch presales in minutes",
+  description:
+    "Create, run, and finalize token presales with auto-liquidity, locks, KYC/audit badges, and social buzz tools — all in one place.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <Web3Providers>{children}</Web3Providers>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
