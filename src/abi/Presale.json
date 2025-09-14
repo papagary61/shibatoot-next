@@ -1,0 +1,25 @@
+[
+  { "type": "function", "stateMutability": "view", "name": "token", "inputs": [], "outputs": [{ "type": "address" }] },
+  { "type": "function", "stateMutability": "view", "name": "owner", "inputs": [], "outputs": [{ "type": "address" }] },
+  { "type": "function", "stateMutability": "view", "name": "softCap", "inputs": [], "outputs": [{ "type": "uint256" }] },
+  { "type": "function", "stateMutability": "view", "name": "hardCap", "inputs": [], "outputs": [{ "type": "uint256" }] },
+  { "type": "function", "stateMutability": "view", "name": "totalRaised", "inputs": [], "outputs": [{ "type": "uint256" }] },
+  { "type": "function", "stateMutability": "view", "name": "startTime", "inputs": [], "outputs": [{ "type": "uint64" }] },
+  { "type": "function", "stateMutability": "view", "name": "endTime", "inputs": [], "outputs": [{ "type": "uint64" }] },
+  { "type": "function", "stateMutability": "view", "name": "minContribution", "inputs": [], "outputs": [{ "type": "uint256" }] },
+  { "type": "function", "stateMutability": "view", "name": "maxContribution", "inputs": [], "outputs": [{ "type": "uint256" }] },
+  { "type": "function", "stateMutability": "view", "name": "listingPercent", "inputs": [], "outputs": [{ "type": "uint16" }] },
+  { "type": "function", "stateMutability": "view", "name": "lpLockDuration", "inputs": [], "outputs": [{ "type": "uint32" }] },
+  { "type": "function", "stateMutability": "view", "name": "acceptToken", "inputs": [], "outputs": [{ "type": "address" }] },
+
+  { "type": "function", "stateMutability": "payable", "name": "contribute", "inputs": [], "outputs": [] },
+  { "type": "function", "stateMutability": "nonpayable", "name": "contributeToken", "inputs": [{ "name": "amount", "type": "uint256" }], "outputs": [] },
+
+  { "type": "function", "stateMutability": "view", "name": "contributions", "inputs": [{ "name": "user", "type": "address" }], "outputs": [{ "type": "uint256" }] },
+  { "type": "function", "stateMutability": "view", "name": "status", "inputs": [], "outputs": [{ "type": "uint8" }] },
+
+  { "type": "event", "name": "Contributed", "inputs": [
+    { "indexed": true, "name": "user", "type": "address" },
+    { "indexed": false, "name": "amount", "type": "uint256" }
+  ] }
+]
