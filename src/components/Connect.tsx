@@ -1,36 +1,31 @@
 // src/components/Connect.tsx
-'use client';
+"use client";
 
-import { useAccount, useConnect, useDisconnect } from 'wagmi';
+import { useAccount, useConnect, useDisconnect } from "wagmi";
+import { injected } from "wagmi/connectors";
 
 export default function Connect() {
   const { address, isConnected } = useAccount();
-  const { connectors, connect } = useConnect();
+  const { connect } = useConnect({ connector: injected() });
   const { disconnect } = useDisconnect();
 
-  if (!isConnected) {
-    const injected = connectors[0]; // MetaMask/Brave
+  if (isConnected) {
     return (
       <button
-        onClick={() => connect({ connector: injected })}
-        className="px-4 py-2 rounded-xl bg-black text-white"
+        onClick={() => disconnect()}
+        className="px-5 py-2 rounded-xl bg-green-600 text-white hover:bg-green-700 transition"
       >
-        Connect Wallet
+        Disconnect ({address?.slice(0, 6)}…{address?.slice(-4)})
       </button>
     );
   }
 
   return (
-    <div className="flex items-center gap-3">
-      <span className="text-sm">
-        {address!.slice(0, 6)}…{address!.slice(-4)}
-      </span>
-      <button
-        onClick={() => disconnect()}
-        className="px-3 py-1 rounded-xl border"
-      >
-        Disconnect
-      </button>
-    </div>
+    <button
+      onClick={() => connect()}
+      className="px-5 py-2 rounded-xl bg-black text-white hover:bg-gray-800 transition"
+    >
+      Connect Wallet
+    </button>
   );
 }
