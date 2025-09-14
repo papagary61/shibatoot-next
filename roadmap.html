@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ShibaToot — Roadmap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Shared sticky header -->
+  <div class="header-wrap">
+    <div class="container">
+      <header class="site-header">
+        <div class="logo-wrap">
+          <img src="./assets/logo.png" alt="" class="logo">
+          <span class="brand">ShibaToot</span>
+        </div>
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./utility.html">Utility</a>
+          <a href="./rewards.html">Rewards</a>
+          <a href="./roadmap.html" class="active">Roadmap</a>
+          <a href="./presales.html">Presales</a>
+          <a href="./dyor.html">DYOR</a>
+        </nav>
+        <div class="header-actions">
+          <span class="chip">Connect Wallet</span>
+          <span class="chip">Sign In</span>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- Sidebar layout -->
+  <div class="layout">
+    <div class="side-shell">
+      <aside class="sidebar">
+        <h3 class="side-title">ShibaToot</h3>
+        <nav class="side-nav">
+          <a href="./index.html">Home</a>
+          <a href="./utility.html">Utility</a>
+          <a href="./rewards.html">Rewards</a>
+          <a href="./roadmap.html" class="active">Roadmap</a>
+          <a href="./presales.html">Presales</a>
+          <a href="./dyor.html">DYOR</a>
+
+          <details class="side-group" open>
+            <summary>Coming Soon</summary>
+            <div class="side-group-links">
+              <a href="./dex.html">Trade (DEX)</a>
+              <a href="./builder.html">Token Builder</a>
+              <a href="./audit.html">Audit Portal</a>
+              <a href="./airdrop.html">Airdrop Engine</a>
+              <a href="./locker.html">Vesting / Locker</a>
+              <a href="./analytics.html">Analytics</a>
+              <a href="./kyc.html">KYC / Badges</a>
+            </div>
+          </details>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <h1>Roadmap</h1>
+
+        <!-- Phase accordions -->
+        <div class="card" style="display:grid;gap:10px">
+          <details open>
+            <summary style="font-weight:800;cursor:pointer">Phase 1 — Core Launchpad</summary>
+            <ul>
+              <li>3%/3% trading fees</li>
+              <li>Presale engine (whitelist, auto-LP, refunds)</li>
+              <li>Top 10 banner + Weekly Rewards headline</li>
+              <li>DYOR acceptance at signup</li>
+              <li>Transparency dashboards</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary style="font-weight:800;cursor:pointer">Phase 2 — Expansion & Revenue Kickstart</summary>
+            <ul>
+              <li>Multi-wallet hub + opt-in promotions</li>
+              <li><strong>Airdrop Engine</strong> (Merkle claim + auto-drop)</li>
+              <li><strong>Audit Portal</strong> (basic scans + partners)</li>
+              <li>Basic Token Builder (no-code)</li>
+              <li>KYC/Audit badges + grading</li>
+              <li>AI Assistant (V1) + auto-social blasts</li>
+              <li>Bonus payout logic (promo weeks)</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary style="font-weight:800;cursor:pointer">Phase 3 — Advanced Utility & Growth</summary>
+            <ul>
+              <li>ShibaTootDEX (native trading)</li>
+              <li>Advanced Token Builder (modules, presets)</li>
+              <li>Token vesting / locker</li>
+              <li>AI Mentor (V2) for creators</li>
+              <li>Partner token payment options</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary style="font-weight:800;cursor:pointer">Phase 4 — Ecosystem Domination</summary>
+            <ul>
+              <li>Cross-chain expansion</li>
+              <li>Paid ads + featured boosts</li>
+              <li>AI Project Genie (V3)</li>
+              <li>Social/community features & governance</li>
+              <li>Premium subscriptions (AI, analytics)</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Milestone callouts -->
+        <div class="card" style="margin-top:12px">
+          <strong>What’s shipping next?</strong>
+          <div style="display:grid;gap:8px;margin-top:8px">
+            <div class="card">Free Entry + Referral tracking (Rewards)</div>
+            <div class="card">Audit Portal (partner integrations)</div>
+            <div class="card">Token Builder (no-code basics)</div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> ShibaToot. Always DYOR. Not financial advice.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ShibaToot — Rewards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Shared sticky header (same as Home) -->
+  <div class="header-wrap">
+    <div class="container">
+      <header class="site-header">
+        <div class="logo-wrap">
+          <img src="./assets/logo.png" alt="" class="logo">
+          <span class="brand">ShibaToot</span>
+        </div>
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./utility.html">Utility</a>
+          <a href="./rewards.html" class="active">Rewards</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./presales.html">Presales</a>
+          <a href="./dyor.html">DYOR</a>
+        </nav>
+        <div class="header-actions">
+          <span class="chip">Connect Wallet</span>
+          <span class="chip">Sign In</span>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- Sidebar layout -->
+  <div class="layout">
+    <div class="side-shell">
+      <aside class="sidebar" id="sidebar">
+        <h3 class="side-title">ShibaToot</h3>
+        <nav class="side-nav">
+          <a href="./index.html">Home</a>
+          <a href="./utility.html">Utility</a>
+          <a href="./rewards.html" class="active">Rewards</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./presales.html">Presales</a>
+          <a href="./dyor.html">DYOR</a>
+
+          <details class="side-group" open>
+            <summary>Coming Soon</summary>
+            <div class="side-group-links">
+              <a href="./dex.html">Trade (DEX)</a>
+              <a href="./builder.html">Token Builder</a>
+              <a href="./audit.html">Audit Portal</a>
+              <a href="./airdrop.html">Airdrop Engine</a>
+              <a href="./locker.html">Vesting / Locker</a>
+              <a href="./analytics.html">Analytics</a>
+              <a href="./kyc.html">KYC / Badges</a>
+            </div>
+          </details>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <h1>Weekly Rewards</h1>
+
+        <!-- Main prize section (identical fire markup as Home) -->
+        <section class="fire-amount">
+          <div class="label">This Week’s Prize</div>
+          <div class="value">$10,000</div>
+          <!-- this gets filled by script.js: applyBonusFlag() -->
+          <div class="bonus-inline" role="status" aria-live="polite"></div>
+          <div class="sub" style="margin-top:8px">Next draw in 2d 11:42:10</div>
+        </section>
+
+        <!-- Action cards on the right were on Home; here we keep actions below -->
+        <div class="card" style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn primary js-free-entry">Get Free Entry</button>
+          <a class="btn ghost" href="./rewards-terms.html#free-entry">Free Entry Details</a>
+          <a class="btn ghost" href="./account.html">My Referral Link</a>
+        </div>
+
+        <!-- Payout Logic -->
+        <div class="card" style="margin-top:12px">
+          <strong>Payout Logic</strong>
+          <ul class="points" style="margin:.6rem 0 0">
+            <li><strong>Baseline:</strong> 1% of LP paid weekly</li>
+            <li><strong>Bonus weeks:</strong> Auto-activated by LP growth or surprise promo</li>
+            <li><strong>Protect mode:</strong> 0.75% cap if LP shrinks</li>
+            <li><strong>Overflow:</strong> Rewards cap at 10% of LP; excess routes to LP & Treasury</li>
+          </ul>
+        </div>
+
+        <!-- Qualify / Disclaimers -->
+        <div class="card" style="margin-top:12px">
+          <strong>How to Qualify</strong>
+          <ul class="points" style="margin:.6rem 0 0">
+            <li>Hold SHBT or participate in presales</li>
+            <li>Snapshot each Friday 23:59 UTC</li>
+            <li>Payout every Saturday</li>
+          </ul>
+          <div style="margin-top:8px">
+            <a class="btn ghost" href="./dyor.html">DYOR / Disclaimer (not a lottery; free entry available)</a>
+          </div>
+        </div>
+
+        <!-- Recent Rewards History (populated by script.js) -->
+        <div id="rewardsHistory" style="margin-top:12px"></div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> ShibaToot. Always DYOR. Not financial advice.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

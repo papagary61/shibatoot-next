@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShibaToot — Launch presales in minutes</title>
+  <!-- Tailwind via CDN (no build step needed) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Create, run, and finalize token presales with auto-LP, locks, KYC/audit badges, and social buzz tools — all in one place." />
+  <link rel="icon" href="/public/favicon.ico" />
+  <style>
+    /* Neon glow helpers */
+    .neon { text-shadow: 0 0 12px rgba(255,255,255,.35); }
+    .btn {
+      @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold transition;
+    }
+    .btn-primary {
+      @apply bg-white text-black hover:bg-zinc-200;
+      box-shadow: 0 0 24px rgba(255,255,255,.15);
+    }
+    .btn-ghost { @apply border border-zinc-700 text-zinc-200 hover:bg-zinc-800/60; }
+    .chip { @apply inline-flex items-center gap-2 rounded-full bg-zinc-800/70 px-3 py-1 text-xs text-zinc-300; }
+    .card {
+      @apply rounded-2xl bg-gradient-to-b from-zinc-900/60 to-zinc-900/30 border border-zinc-800 p-5;
+      box-shadow: 0 0 20px rgba(0,0,0,.25);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#0b0b0f] text-zinc-100 selection:bg-fuchsia-500/30">
+  <!-- Background gradient + grid -->
+  <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute inset-0 bg-[radial-gradient(1000px_500px_at_70%_-10%,rgba(168,85,247,.25),transparent),radial-gradient(800px_400px_at_20%_10%,rgba(59,130,246,.18),transparent)]"></div>
+    <div class="absolute inset-0 opacity-[.06] bg-[linear-gradient(to_right,#fff1_1px,transparent_1px),linear-gradient(to_bottom,#fff1_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+  </div>
+
+  <!-- NAV -->
+  <header class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+    <nav class="flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-fuchsia-500 to-blue-500"></div>
+        <span class="text-lg font-bold neon tracking-wide">ShibaToot</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm text-zinc-300">
+        <a href="/howitworks.html" class="hover:text-white">How it works</a>
+        <a href="/features.html" class="hover:text-white">Features</a>
+        <a href="/lilpepe.html" class="hover:text-white">LilPepe</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="/builder.html" class="btn btn-primary">Get started</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-16">
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-10">
+      <div class="w-full lg:w-[58%]">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="chip">Transparent fees</span>
+          <span class="chip">Auto-LP</span>
+          <span class="chip">SAFU</span>
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight neon">
+          Launch presales in minutes —<br class="hidden sm:block" />
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400">with ShibaToot.</span>
+        </h1>
+        <p class="mt-5 max-w-xl text-zinc-300">
+          Create, run, and finalize token presales with auto-liquidity, locks, KYC/audit badges, and social buzz tools — all in one place.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="/builder.html" class="btn btn-primary">Create a presale</a>
+          <a href="/presales.html" class="btn btn-ghost">Explore presales</a>
+          <a href="/audit.html" class="btn btn-ghost">KYC & Audit</a>
+        </div>
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-zinc-400">
+          <div class="card text-center"><div class="text-xl font-bold text-white">ETH</div><div>Mainnet</div></div>
+          <div class="card text-center"><div class="text-xl font-bold text-white">BASE</div><div>Sepolia / Main</div></div>
+          <div class="card text-center"><div class="text-xl font-bold text-white">BNB</div><div>Smart Chain</div></div>
+          <div class="card text-center"><div class="text-xl font-bold text-white">POLY</div><div>Polygon</div></div>
+        </div>
+      </div>
+
+      <!-- Feature cards -->
+      <div class="w-full lg:w-[42%] grid grid-cols-2 gap-4">
+        <div class="card">
+          <div class="text-sm text-zinc-400 mb-1">Tier 1</div>
+          <div class="font-semibold mb-2">Featured Project</div>
+          <div class="h-2 rounded bg-zinc-800">
+            <div class="h-2 w-2/3 rounded bg-gradient-to-r from-fuchsia-500 to-blue-500"></div>
+          </div>
+          <a href="/presales.html" class="mt-4 inline-block text-sm text-zinc-300 hover:text-white">View presales →</a>
+        </div>
+        <div class="card">
+          <div class="text-sm text-zinc-400 mb-1">Security</div>
+          <div class="font-semibold mb-2">Multi-sig • Timelocks</div>
+          <p class="text-sm text-zinc-400">Best-practice deploys with locks & badges.</p>
+        </div>
+        <div class="card">
+          <div class="text-sm text-zinc-400 mb-1">Fees</div>
+          <div class="font-semibold mb-2">Lower than most</div>
+          <p class="text-sm text-zinc-400">Transparent pricing, no surprises.</p>
+        </div>
+        <div class="card">
+          <div class="text-sm text-zinc-400 mb-1">Marketing</div>
+          <div class="font-semibold mb-2">Buzz tools</div>
+          <p class="text-sm text-zinc-400">Auto-badges, share cards, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="card flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="text-lg font-semibold">Ready to launch?</div>
+        <div class="text-zinc-400 text-sm">Deploy your presale with locks & auto-LP in minutes.</div>
+      </div>
+      <div class="flex gap-3">
+        <a href="/builder.html" class="btn btn-primary">Get started</a>
+        <a href="/howitworks.html" class="btn btn-ghost">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-zinc-800/70">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-zinc-400 flex flex-col md:flex-row items-center justify-between gap-3">
+      <div>© <span id="y"></span> ShibaToot • All rights reserved</div>
+      <div class="flex gap-5">
+        <a class="hover:text-white" href="/terms.html">Terms</a>
+        <a class="hover:text-white" href="/privacy.html">Privacy</a>
+        <a class="hover:text-white" href="https://x.com/ShibaToot" target="_blank" rel="noopener">X</a>
+        <a class="hover:text-white" href="/discord.html">Discord</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>

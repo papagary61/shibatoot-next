@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ShibaToot — DYOR / Disclaimer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="header-wrap">
+    <div class="container">
+      <header class="site-header">
+        <div class="logo-wrap"><img src="./assets/logo.png" alt="" class="logo"><span class="brand">ShibaToot</span></div>
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./utility.html">Utility</a>
+          <a href="./rewards.html">Rewards</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./presales.html">Presales</a>
+          <a href="./dyor.html" class="active">DYOR</a>
+        </nav>
+        <div class="header-actions"><span class="chip">Connect Wallet</span><span class="chip">Sign In</span></div>
+      </header>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="side-shell">
+      <aside class="sidebar">
+        <h3 class="side-title">ShibaToot</h3>
+        <nav class="side-nav">
+          <a href="./index.html">Home</a>
+          <a href="./utility.html">Utility</a>
+          <a href="./rewards.html">Rewards</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./presales.html">Presales</a>
+          <a href="./dyor.html" class="active">DYOR</a>
+          <details class="side-group" open>
+            <summary>Coming Soon</summary>
+            <div class="side-group-links">
+              <a href="./dex.html">Trade (DEX)</a>
+              <a href="./builder.html">Token Builder</a>
+              <a href="./audit.html">Audit Portal</a>
+              <a href="./airdrop.html">Airdrop Engine</a>
+              <a href="./locker.html">Vesting / Locker</a>
+              <a href="./analytics.html">Analytics</a>
+              <a href="./kyc.html">KYC / Badges</a>
+            </div>
+          </details>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <h1>DYOR / Disclaimer</h1>
+
+        <div class="card">
+          <p><strong>Not financial advice.</strong> ShibaToot is a platform that provides tools for creators and communities. Crypto assets are volatile and risky. Always do your own research (DYOR) before contributing to presales or interacting with tokens.</p>
+          <ul class="points">
+            <li>You are responsible for your decisions and on-chain actions.</li>
+            <li>Past performance does not guarantee future results.</li>
+            <li>Smart contracts can have bugs; audits reduce but do not eliminate risk.</li>
+          </ul>
+        </div>
+
+        <div class="card" id="free-entry" style="margin-top:12px">
+          <h3>Free Entry Program (no purchase necessary)</h3>
+          <p>To ensure our weekly rewards program is <strong>not a lottery</strong>, we provide a no-purchase path to entries each week.</p>
+          <ul class="points">
+            <li>One free entry per wallet per week via on-site form.</li>
+            <li>Bonus entries via social tasks (follow, repost, join) and <strong>referrals</strong>.</li>
+            <li>Entries are capped; abuse or spam voids eligibility.</li>
+          </ul>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+            <button class="btn primary js-free-entry">Get Free Entry</button>
+            <a class="btn ghost" href="./rewards-terms.html#free-entry">Read full terms</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Audits, KYC & Badges</h3>
+          <p>Badges visible on Presales indicate partner services (e.g., KYC, audit, LP lock). Badges communicate status but are not endorsements.</p>
+          <div class="badges" style="margin-top:6px">
+            <span class="badge kyc">✅ KYC</span>
+            <span class="badge audit">🔍 Audit</span>
+            <span class="badge lock">🔒 LP Lock</span>
+            <span class="badge safu">🛡 SAFU</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer"><p>© <span id="year"></span> ShibaToot. Always DYOR. Not financial advice.</p></footer>
+  <script src="./script.js"></script>
+</body>
+</html>

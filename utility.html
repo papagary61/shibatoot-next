@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ShibaToot — Utility</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Shared sticky header -->
+  <div class="header-wrap">
+    <div class="container">
+      <header class="site-header">
+        <div class="logo-wrap">
+          <img src="./assets/logo.png" alt="" class="logo">
+          <span class="brand">ShibaToot</span>
+        </div>
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./utility.html">Utility</a>
+          <a href="./rewards.html">Rewards</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./presales.html">Presales</a>
+          <a href="./dyor.html">DYOR</a>
+        </nav>
+        <div class="header-actions">
+          <span class="chip">Connect Wallet</span>
+          <span class="chip">Sign In</span>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- Sidebar layout -->
+  <div class="layout">
+    <div class="side-shell">
+      <aside class="sidebar" id="sidebar">
+        <h3 class="side-title">ShibaToot</h3>
+        <nav class="side-nav">
+          <a href="./index.html">Home</a>
+          <a href="./utility.html">Utility</a>
+          <a href="./rewards.html">Rewards</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./presales.html">Presales</a>
+          <a href="./dyor.html">DYOR</a>
+
+          <details class="side-group" open>
+            <summary>Coming Soon</summary>
+            <div class="side-group-links">
+              <a href="./dex.html">Trade (DEX)</a>
+              <a href="./builder.html">Token Builder</a>
+              <a href="./audit.html">Audit Portal</a>
+              <a href="./airdrop.html">Airdrop Engine</a>
+              <a href="./locker.html">Vesting / Locker</a>
+              <a href="./analytics.html">Analytics</a>
+              <a href="./kyc.html">KYC / Badges</a>
+            </div>
+          </details>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <h1>SHBT Auto-Recycling Engine</h1>
+
+        <div class="card" style="display:grid;gap:10px">
+          <p>
+            Every time the platform is used, <strong>SHBT</strong> flows back into the ecosystem:
+            fees and services paid in SHBT are partially converted to ETH, paired with SHBT, and
+            added to liquidity. The more people build and trade here, the stronger the LP.
+          </p>
+
+          <!-- Simple static loop diagram (no animation to avoid the earlier “spinning confusion”) -->
+          <div style="display:grid;place-items:center;padding:8px">
+            <svg viewBox="0 0 520 520" width="100%" style="max-width:520px;filter:drop-shadow(0 10px 30px rgba(0,0,0,.25))">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#34f3ff"/><stop offset="1" stop-color="#ff51c8"/>
+                </linearGradient>
+              </defs>
+              <circle cx="260" cy="260" r="185" fill="none" stroke="url(#g1)" stroke-width="14" opacity=".5"/>
+              <circle cx="260" cy="260" r="110" fill="none" stroke="url(#g1)" stroke-width="14" opacity=".35"/>
+
+              <g font-family="Inter,system-ui" font-weight="700" font-size="16" fill="#e7f2ff" text-anchor="middle">
+                <text x="260" y="265" font-size="18" opacity=".9">Token Growth</text>
+                <text x="260" y="88"  opacity=".85">Platform Usage</text>
+                <text x="430" y="275" opacity=".85">SHBT Payments</text>
+                <text x="260" y="460" opacity=".85">Auto-Convert</text>
+                <text x="90"  y="275" opacity=".85">Add Liquidity</text>
+              </g>
+
+              <!-- Four soft markers -->
+              <circle cx="260" cy="75"  r="7" fill="url(#g1)"/>
+              <circle cx="445" cy="260" r="7" fill="url(#g1)"/>
+              <circle cx="260" cy="445" r="7" fill="url(#g1)"/>
+              <circle cx="75"  cy="260" r="7" fill="url(#g1)"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <strong>Utility Highlights</strong>
+          <div class="features" style="margin-top:10px">
+            <div class="card">Discounted fees when paid in SHBT</div>
+            <div class="card">Premium placement & ads in SHBT</div>
+            <div class="card">AI Pro tools unlocked by SHBT</div>
+            <div class="card">DEX fee share for holders</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <strong>Transparency</strong>
+          <p style="margin:.6rem 0 0">
+            A public dashboard will show LP growth, burn/recycle flows, and weekly reward
+            allocations. Until then, weekly summaries will be posted in the Rewards History.
+          </p>
+          <div style="margin-top:8px">
+            <a class="btn primary" href="./rewards.html">View Rewards</a>
+            <a class="btn ghost" href="./dyor.html">DYOR / Disclaimer</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> ShibaToot. Always DYOR. Not financial advice.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

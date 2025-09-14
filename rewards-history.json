@@ -1,0 +1,32 @@
+[
+  {
+    "year": 2025,
+    "week": 36,
+    "date": "2025-09-05",
+    "prizeUSD": 10000,
+    "winner": "0x7a93...bC15",
+    "reason": "growth",
+    "bonusPct": 2,
+    "tx": "https://example.com/tx/0xabc1"
+  },
+  {
+    "year": 2025,
+    "week": 35,
+    "date": "2025-08-29",
+    "prizeUSD": 10000,
+    "winner": "0xa1D2...9eF0",
+    "reason": "promo",
+    "bonusPct": 1.5,
+    "tx": "https://example.com/tx/0xabc2"
+  },
+  {
+    "year": 2025,
+    "week": 34,
+    "date": "2025-08-22",
+    "prizeUSD": 10000,
+    "winner": "0x55fE...11d3",
+    "reason": "none",
+    "bonusPct": 0,
+    "tx": "https://example.com/tx/0xabc3"
+  }
+]

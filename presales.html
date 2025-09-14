@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ShibaToot — Presales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Shared sticky header -->
+  <div class="header-wrap">
+    <div class="container">
+      <header class="site-header">
+        <div class="logo-wrap">
+          <img src="./assets/logo.png" alt="" class="logo">
+          <span class="brand">ShibaToot</span>
+        </div>
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./utility.html">Utility</a>
+          <a href="./rewards.html">Rewards</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./presales.html" class="active">Presales</a>
+          <a href="./dyor.html">DYOR</a>
+        </nav>
+        <div class="header-actions">
+          <span class="chip">Connect Wallet</span>
+          <span class="chip">Sign In</span>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- Sidebar layout -->
+  <div class="layout">
+    <div class="side-shell">
+      <aside class="sidebar">
+        <h3 class="side-title">ShibaToot</h3>
+        <nav class="side-nav">
+          <a href="./index.html">Home</a>
+          <a href="./utility.html">Utility</a>
+          <a href="./rewards.html">Rewards</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./presales.html" class="active">Presales</a>
+          <a href="./dyor.html">DYOR</a>
+
+          <details class="side-group" open>
+            <summary>Coming Soon</summary>
+            <div class="side-group-links">
+              <a href="./dex.html">Trade (DEX)</a>
+              <a href="./builder.html">Token Builder</a>
+              <a href="./audit.html">Audit Portal</a>
+              <a href="./airdrop.html">Airdrop Engine</a>
+              <a href="./locker.html">Vesting / Locker</a>
+              <a href="./analytics.html">Analytics</a>
+              <a href="./kyc.html">KYC / Badges</a>
+            </div>
+          </details>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <h1>Active Presales</h1>
+
+        <!-- Top notice -->
+        <div class="card" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+          <span class="chip">Auto-LP • Refund logic • Whitelist support</span>
+          <a class="btn ghost" href="./dyor.html">Read DYOR / Risks</a>
+        </div>
+
+        <!-- Filters -->
+        <div class="card" style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn primary">All</button>
+          <button class="btn ghost">Trending</button>
+          <button class="btn ghost">Closing Soon</button>
+          <button class="btn ghost">New</button>
+          <div style="flex:1"></div>
+          <button class="btn ghost">Create Presale</button>
+        </div>
+
+        <!-- Presale cards -->
+        <div style="display:grid;gap:12px;margin-top:12px">
+          <!-- BaseBots -->
+          <article class="card" style="display:grid;grid-template-columns:64px 1fr 220px;gap:14px;align-items:center">
+            <div class="token-card" style="grid-template-columns:36px;gap:0;padding:8px">
+              <div class="logo" style="background:#ffd86b">BB</div>
+            </div>
+            <div>
+              <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+                <h3 style="margin:0">BaseBots</h3>
+                <span class="chip">Buy-in 0.08 ETH</span>
+                <span class="chip">Whitelist</span>
+              </div>
+
+              <div class="badges">
+                <span class="badge kyc">✅ KYC</span>
+                <span class="badge audit">🔍 Audit: Coinsult</span>
+                <span class="badge lock">🔒 LP Lock: 12 mo</span>
+                <span class="badge safu">🛡 SAFU</span>
+              </div>
+
+              <p style="margin:.5rem 0 0">Soft/Hard Cap: <strong>120 / 300 ETH</strong></p>
+              <div class="tc-progress" style="margin-top:8px"><span style="width:82%"></span></div>
+              <p style="margin:.3rem 0 0">246/300 ETH</p>
+            </div>
+            <div style="display:grid;gap:8px;justify-items:end">
+              <a href="#" class="btn primary" aria-label="Join BaseBots presale">Join Presale</a>
+              <a href="#" class="btn ghost">View Details</a>
+            </div>
+          </article>
+
+          <!-- MoonYap -->
+          <article class="card" style="display:grid;grid-template-columns:64px 1fr 220px;gap:14px;align-items:center">
+            <div class="token-card" style="grid-template-columns:36px;gap:0;padding:8px">
+              <div class="logo" style="background:#a7ffcf">MY</div>
+            </div>
+            <div>
+              <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+                <h3 style="margin:0">MoonYap</h3>
+                <span class="chip">Buy-in 0.03 ETH</span>
+              </div>
+
+              <div class="badges">
+                <span class="badge kyc">✅ KYC</span>
+                <span class="badge audit">🔍 Audit: Partner</span>
+                <span class="badge lock">🔒 LP Lock: 3 mo</span>
+              </div>
+
+              <p style="margin:.5rem 0 0">Soft/Hard Cap: <strong>50 / 150 ETH</strong></p>
+              <div class="tc-progress" style="margin-top:8px"><span style="width:35%"></span></div>
+              <p style="margin:.3rem 0 0">52/150 ETH</p>
+            </div>
+            <div style="display:grid;gap:8px;justify-items:end">
+              <a href="#" class="btn primary" aria-label="Join MoonYap presale">Join Presale</a>
+              <a href="#" class="btn ghost">View Details</a>
+            </div>
+          </article>
+
+          <!-- TootVibes -->
+          <article class="card" style="display:grid;grid-template-columns:64px 1fr 220px;gap:14px;align-items:center">
+            <div class="token-card" style="grid-template-columns:36px;gap:0;padding:8px">
+              <div class="logo" style="background:#8cfbff">TV</div>
+            </div>
+            <div>
+              <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+                <h3 style="margin:0">TootVibes</h3>
+                <span class="chip">Buy-in 0.05 ETH</span>
+                <span class="chip">KYC</span>
+              </div>
+
+              <div class="badges">
+                <span class="badge kyc">✅ KYC</span>
+                <span class="badge lock">🔒 LP Lock: 6 mo</span>
+              </div>
+
+              <p style="margin:.5rem 0 0">Soft/Hard Cap: <strong>200 / 500 ETH</strong></p>
+              <div class="tc-progress" style="margin-top:8px"><span style="width:60%"></span></div>
+              <p style="margin:.3rem 0 0">300/500 ETH</p>
+            </div>
+            <div style="display:grid;gap:8px;justify-items:end">
+              <a href="#" class="btn primary" aria-label="Join TootVibes presale">Join Presale</a>
+              <a href="#" class="btn ghost">View Details</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Info/footer -->
+        <div class="card" style="margin-top:12px">
+          <strong>How presales work</strong>
+          <p style="margin:.6rem 0 0">
+            Funds are held until soft cap is reached. If soft cap fails, contributors can claim refunds.
+            On successful close, liquidity is auto-added and locked per project settings.
+          </p>
+          <div style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn ghost" href="./dyor.html">DYOR / Risks</a>
+            <a class="btn ghost" href="./utility.html">How SHBT grows with usage</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> ShibaToot. Always DYOR. Not financial advice.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
