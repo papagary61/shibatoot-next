@@ -20,7 +20,10 @@ export default function Home() {
             <a href="/lilpepe.html" className="hover:text-white">LilPepe</a>
           </div>
           <div className="flex items-center gap-3">
-            <a href="/builder.html" className="rounded-xl px-5 py-3 font-semibold bg-white text-black hover:bg-zinc-200 transition">
+            <a
+              href="/builder.html"
+              className="rounded-xl px-5 py-3 font-semibold bg-white text-black hover:bg-zinc-200 transition"
+            >
               Get started
             </a>
           </div>
@@ -43,16 +46,26 @@ export default function Home() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-zinc-300">
-              Create, run, and finalize token presales with auto-liquidity, locks, KYC/audit badges, and social buzz tools — all in one place.
+              Create, run, and finalize token presales with auto-liquidity, locks, KYC/audit badges, and social buzz tools —
+              all in one place.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a href="/builder.html" className="rounded-xl px-5 py-3 font-semibold bg-white text-black hover:bg-zinc-200 transition">
+              <a
+                href="/builder.html"
+                className="rounded-xl px-5 py-3 font-semibold bg-white text-black hover:bg-zinc-200 transition"
+              >
                 Create a presale
               </a>
-              <a href="/presales.html" className="rounded-xl px-5 py-3 font-semibold border border-zinc-700 text-zinc-200 hover:bg-zinc-800/60 transition">
+              <a
+                href="/presales.html"
+                className="rounded-xl px-5 py-3 font-semibold border border-zinc-700 text-zinc-200 hover:bg-zinc-800/60 transition"
+              >
                 Explore presales
               </a>
-              <a href="/audit.html" className="rounded-xl px-5 py-3 font-semibold border border-zinc-700 text-zinc-200 hover:bg-zinc-800/60 transition">
+              <a
+                href="/audit.html"
+                className="rounded-xl px-5 py-3 font-semibold border border-zinc-700 text-zinc-200 hover:bg-zinc-800/60 transition"
+              >
                 KYC & Audit
               </a>
             </div>
@@ -108,7 +121,7 @@ export default function Home() {
           <div className="flex gap-5">
             <a className="hover:text-white" href="/terms.html">Terms</a>
             <a className="hover:text-white" href="/privacy.html">Privacy</a>
-            <a className="hover:text-white" href="https://x.com/ShibaToot" target="_blank">X</a>
+            <a className="hover:text-white" href="https://x.com/ShibaToot" target="_blank" rel="noreferrer">X</a>
             <a className="hover:text-white" href="/discord.html">Discord</a>
           </div>
         </div>
