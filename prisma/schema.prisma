@@ -1,0 +1,159 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+/* -------------------------
+   EXISTING MODELS (unchanged)
+-------------------------- */
+
+model Project {
+  id          String   @id @default(cuid())
+  name        String
+  owner       String   // wallet address
+  description String?
+  website     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  status      Status   @default(PENDING)
+  approvedAt  DateTime?
+  rejectedAt  DateTime?
+  reviewer    String?
+}
+
+enum Status {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model Winner {
+  id          String   @id @default(cuid())
+  wallet      String              // winner address
+  amountUsd   Float               // how much paid (in USD)
+  prizePct    Float               // 1 or 2 (baseline or bonus)
+  txHash      String?             // optional on-chain tx hash
+  drawAt      DateTime            // when the draw happened (UTC)
+  weekStart   DateTime            // normalized week start (UTC, e.g., last Saturday 00:00)
+  createdAt   DateTime @default(now())
+  notes       String?
+
+  @@index([drawAt], map: "idx_winner_drawAt")
+  @@unique([weekStart, wallet], map: "uniq_week_wallet") // avoids duplicate for same week/wallet
+}
+
+model Settings {
+  id                    Int     @id @default(1)
+  rewardSource          String  @default("manual") // 'manual' | 'lp' | 'treasury'
+  manualRewardUsd       Float   @default(10000)
+  lpUsd                 Float   @default(1000000)
+  lpGrowthPct           Float   @default(0)
+  bonusThresholdUsd     Float   @default(1200000)
+  bonusGrowthTriggerPct Float   @default(5)
+  useLiveLp             Boolean @default(false)
+  updatedAt             DateTime @updatedAt
+}
+
+model TickerItem {
+  id        String   @id @default(cuid())
+  rank      Int      // 1..10 (we’ll sort by this)
+  symbol    String
+  name      String
+  changePct Float
+  updatedAt DateTime @updatedAt
+
+  @@unique([rank], map: "uniq_ticker_rank")
+  @@index([symbol])
+}
+
+/* -------------------------
+   NEW MODELS (referrals)
+-------------------------- */
+
+/// Individual inbound referral clicks (for attribution + analytics)
+model ReferralClick {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  referrer    String              // 0x wallet of referrer (normalize to lowercase)
+  ipHash      String?             // hashed IP (basic dedupe/anti-abuse)
+  userAgent   String?
+  landingPath String?
+
+  @@index([referrer], map: "idx_refclick_referrer")
+}
+
+/// Lifetime binding between a referred wallet and its referrer (first click wins)
+model ReferralBind {
+  id            String   @id @default(cuid())
+  createdAt     DateTime @default(now())
+  referrer      String              // 0x wallet (normalized)
+  referred      String   @unique    // 0x wallet (normalized)
+  sourceClickId String?             // optionally point to first click id
+
+  @@index([referrer], map: "idx_refbind_referrer")
+}
+/// Community reward entries by week
+model RewardEntry {
+  id        String   @id @default(cuid())
+  wallet    String
+  weekStart DateTime
+  source    String   // 'free' | 'referral' | 'stake' | 'promo' (future-safe)
+  amount    Int      @default(1)
+  createdAt DateTime @default(now())
+
+  @@index([wallet, weekStart])
+  @@index([weekStart])
+}
+model Entry {
+  id         String   @id @default(cuid())
+  wallet     String
+  weekStart  DateTime // normalized week (UTC start)
+  source     EntrySource
+  weight     Int      @default(1)
+  referrer   String?  // wallet that referred this entrant (for referral credit)
+  createdAt  DateTime @default(now())
+
+  @@index([weekStart])
+  @@index([wallet])
+  @@unique([wallet, weekStart, source], map: "uniq_week_wallet_source") // prevents multi free claims
+}
+
+enum EntrySource {
+  FREE       // weekly free entry
+  REFERRAL   // entries granted via referrals
+  BONUS      // promo/booster/manual
+  STAKE      // staking tier bonus (future)
+}
+
+model WeeklySeed {
+  id         String   @id @default(cuid())
+  weekStart  DateTime @unique
+  commit     String   // server commitment (e.g., sha256 of secret+weekStart)
+  reveal     String?  // revealed random string used to draw (set at draw time)
+  committedAt DateTime @default(now())
+  revealedAt DateTime?
+}
+
+model Payout {
+  id          String   @id @default(cuid())
+  winnerId    String
+  wallet      String
+  chainId     Int
+  tokenSymbol String   // e.g., USDC, ETH
+  amountToken Float
+  txHash      String?
+  status      PayoutStatus @default(PENDING)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum PayoutStatus {
+  PENDING
+  SENT
+  FAILED
+}
